@@ -11,6 +11,7 @@ MQTT_KEEPALIVE_INTERVAL = 60
 MQTT_TOPIC = "Media"
 ImageFile = ''
 VideoFile = ''
+
 # This is the Subscriber
 
 
@@ -25,8 +26,11 @@ def on_message(client, userdata, msg):
     ImageFile, VideoFile = FileNames.split(',')
     print(ImageFile)
     print(VideoFile)
+    print("Download in progress")
+    os.popen("gsutil cp gs://media_2019/images/"+ImageFile + " Content/")
+    os.popen("gsutil cp gs://media_2019/videos/"+VideoFile + " Content/")
 
-
+    
 # Initiate MQTT Client
 mqttc = mqtt.Client()
 

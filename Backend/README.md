@@ -87,13 +87,13 @@ Step 4: Activate the virtual environment
 * Setup up the MQTT Consumer 
 
 > Install mosquitto-client
-    - sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
-    - sudo apt-get update
-    - sudo apt install mosquitto-clients
+   - sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+   - sudo apt-get update
+   - sudo apt install mosquitto-clients
 
 > Install paho-mqtt-python 
-    - first create a virtual Environment 
-    - pip install paho-mqtt
+   - first create a virtual Environment 
+   - pip install paho-mqtt
 
 ## Deployment
 

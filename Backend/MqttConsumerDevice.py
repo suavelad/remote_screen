@@ -1,8 +1,22 @@
 #!/usr/bin/env python3
 
+'''
+The receives the name of the last data upload of the cloud storage 
+then it downloads that data using the name into the content folder
+which will then be sorted and displayed on the advert screen using 
+a media player. 
+
+'''
 import os
 import sys
 import paho.mqtt.client as mqtt
+from google.cloud import storage
+
+
+# Instantiate a client
+client = storage.Client()
+bucket = client.get_bucket("media_2019")
+
 
 # Define Variables
 MQTT_HOST = "localhost"
@@ -22,27 +36,49 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message(client, userdata, msg):
     FileNames = msg.payload.decode()
-    mqttc.disconnect()
-    ImageFile, VideoFile = FileNames.split(',')
-    print(ImageFile)
-    print(VideoFile)
-    print("Download in progress")
-    os.popen("gsutil cp gs://media_2019/images/"+ImageFile + " Content/")
-    os.popen("gsutil cp gs://media_2019/videos/"+VideoFile + " Content/")
-
+    if "," in FileNames:
+        ImageFile, VideoFile = FileNames.split(',')
+        print("Contents: ")
+        print(ImageFile)
+        print(VideoFile)
+        print("Download in progress")
+        # os.popen("gsutil cp gs://media_2019/images/"+ImageFile + " Content/")
+        # os.popen("gsutil cp gs://media_2019/videos/"+VideoFile + " Content/")
+        ImageBlob = bucket.blob('images/'+ImageFile)
+        VideoBlob = bucket.blob('videos/'+VideoFile)
+        ImageBlob.download_to_filename('Backend/Content/'+ImageFile)
+        VideoBlob.download_to_filename('Backend/Content/'+VideoFile)
+        print("Download Sucessful")
+        mqttc.disconnect()
     
+    elif FileNames == 'NaN':
+        print('pass')
+        pass
+    elif 'jpg' in FileNames:
+        ImageFile = FileNames
+        print(ImageFile)
+        print("Image Download in progress")
+        ImageBlob = bucket.blob('images/'+ImageFile)
+        ImageBlob.download_to_filename('Backend/Content/'+ImageFile)
+        mqttc.disconnect()
+    
+    elif '.mp4' in FileNames:
+        VideoFile = FileNames
+        print(VideoFile)
+        print("Video Download in progress")
+        VideoBlob = bucket.blob('videos/'+VideoFile)
+        VideoBlob.download_to_filename('Backend/Content/'+VideoFile)
+        mqttc.disconnect()
+
 # Initiate MQTT Client
 mqttc = mqtt.Client()
 
 # Assign event callbacks
 mqttc.on_message = on_message
 mqttc.on_connect = on_connect
-# mqttc.on_subscribe = on_subscribe
-
 
 # Connect with MQTT Broker
 mqttc.connect(MQTT_HOST, MQTT_PORT, MQTT_KEEPALIVE_INTERVAL)
-
 
 # Continue monitoring the incoming messages for subscribed topic
 mqttc.loop_forever()

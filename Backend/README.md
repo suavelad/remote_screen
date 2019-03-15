@@ -72,7 +72,19 @@ Step 4: Activate the virtual environment
 - pip install paho-mqtt
 
 #Setting up the Raspberry Device
-* Setup up gsutil tool
+* Setup up GCP
+    - pip install google-cloud-storage
+    - In the GCP Console, go to the "Create service account key page".
+      * GO TO THE CREATE SERVICE ACCOUNT KEY PAGE
+      * From the Service account list, select New service account.
+      * In the Service account name field, enter a name.
+      * From the Role list, select Project > Owner
+      * Click Create. A JSON file that contains your key downloads to your computer [PATH] of your choice
+      * On your shell terminal, type : export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
+        (Example: export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/[FILE_NAME].json") 
+
+
+
 
 * Setup up the MQTT Consumer 
 - Install mosquitto-client

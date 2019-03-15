@@ -51,21 +51,21 @@ while True :
 
     if LatestImage == imageNames[-1][34:]:
         IError = 'True'
-        print("Pass")
+        # print("Pass")
         pass
     else: 
-        print("Image Publishing")
+        print("Image Publishing...")
         LatestImage = imageNames[-1][34:]
         IError = 'False'
         print(LatestImage)
 
     if LatestVideo == videoNames[-1][34:]:
         VError = 'True'
-        print("Pass")
+        # print("Pass")
         pass
 
     else:
-        print("Video Publishing")
+        print("Video Publishing...")
         LatestVideo = videoNames[-1][34:]
         VError = 'False'
         print(LatestVideo)
@@ -81,7 +81,8 @@ while True :
     
     else:
         MQTT_MSG = LatestImage + "," + LatestVideo
-
+    print("*****************")
+    print("Files for publishing:  ")
     print(MQTT_MSG)
 
 
@@ -90,6 +91,7 @@ while True :
     # Define on_publish event function
     def on_publish(client, userdata, mid):
         print("Message Published...")
+        print (" ")
 
     # Initiate MQTT Client
     client = mqtt.Client()

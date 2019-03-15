@@ -44,16 +44,16 @@ Step 4: Activate the virtual environment
 
     2. Download the latest version compatible with your OS
 
-    3. Extract the download file ( tar -xzvf  filename.tar.gz
+    3. Extract the download file (tar -xzvf  filename.tar.gz)
 
-    4. oen your terminal, go to : $ ./google-cloud-sdk/install.sh
+    4. Open your terminal, go to : $ ./google-cloud-sdk/install.sh
 
     5. Run gcloud init to initialize the SDK:$ ./google-cloud-sdk/bin/gcloud init
 
     6. while in the virtual environment install gsutil python package: 
         "pip install gsutil"
 
-    7. Follow the steps to authenticate with your google account (if it does not ask you to authenticate,  use : "gsutil -config" on the terminal while in the virtual environment
+    7. Follow the steps to authenticate with your google account (if it does not ask you to authenticate,  use : "gsutil -config"     on the terminal while in the virtual environment
 
     8. Then you are ready to work 
 
@@ -82,8 +82,6 @@ Step 4: Activate the virtual environment
       * Click Create. A JSON file that contains your key downloads to your computer [PATH] of your choice
       * On your shell terminal, type : export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
         (Example: export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/[FILE_NAME].json") 
-
-
 
 
 * Setup up the MQTT Consumer 

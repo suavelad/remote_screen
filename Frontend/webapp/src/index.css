@@ -40,7 +40,8 @@ body{
   -webkit-text-fill-color: rgb(0, 50, 107);
 }
 
-.admin_content{    
+
+.home_content{    
   display: flex;
   width: 100%;
   height: 900px;
@@ -58,11 +59,41 @@ body{
   height: 900px;
 }
 
-.home_content{    
+.admin_content{    
   display: flex;
   width: 100%;
   height: 900px;
 }
+
+.error_content{    
+  display: flex;
+  width: 100%;
+  height: 900px;
+}
+
+.error_box {
+  width: 400px;
+  height: 400px;
+  opacity: 0.5;
+  background-color: bisque;
+  margin-top: 250px;
+  margin-bottom: 250px;
+  margin-left: 35%;
+  text-align: center;
+  left: 50%;
+
+}
+
+.error_box h2 {
+  font-size: 30px;
+  -webkit-text-fill-color:  rgb(0, 50, 107);
+  margin-top: 200px;
+  margin-bottom: 200px;
+  text-align: center;
+  left: 50%;
+
+}
+
 
 .footer {
   background-color: rgb(255, 214, 138);
@@ -75,6 +106,7 @@ body{
 
 .footer h3 a {
   -webkit-text-fill-color: rgb(0, 50, 107);
+
   font-weight: 500;
   text-decoration: none;
   display: inline-block;
@@ -87,4 +119,5 @@ body{
 
 .footer h3  {
   font-size: 15px;
+
 }

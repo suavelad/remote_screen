@@ -1,3 +1,8 @@
-#Ignore a folders
+#Ignore folders
 Test/
-Content/
+Frontend/webapp/node_modules/
+Frontend/'~'/
+Frontend/vscode-root/
+
+#Ignore files
+Media-606208d3d348.json

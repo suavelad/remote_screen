@@ -1,0 +1,6 @@
+[2019-04-19 13:17:08.290] [main] [error] [uncaught exception in main]: Failed to watch /home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/User for changes (Error: ENOSPC: no space left on device, watch '/home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/User')
+[2019-04-19 13:17:08.342] [main] [info] update#setState idle
+[2019-04-19 13:17:38.345] [main] [info] update#setState checking for updates
+[2019-04-19 13:17:38.539] [main] [info] update#setState idle
+[2019-04-19 14:17:38.373] [main] [info] update#setState checking for updates
+[2019-04-19 14:17:39.332] [main] [info] update#setState idle

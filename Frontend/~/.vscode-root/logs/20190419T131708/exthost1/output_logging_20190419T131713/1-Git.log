@@ -1,0 +1,29 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/s/Documents/Projects/Remote_Screen
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse dev
+> git rev-parse --symbolic-full-name dev@{u}
+> git rev-list --left-right dev...refs/remotes/origin/dev
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :Frontend/webapp/src/Components/Header.js
+> git ls-files --stage -- Frontend/webapp/src/Components/
+> git show :Frontend/webapp/src/Components/Footer.js
+> git ls-files --stage -- Frontend/webapp/src/Components/
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :Frontend/webapp/public/index.html
+> git ls-files --stage -- Frontend/webapp/public/
+> git show :Frontend/webapp/src/index.js
+> git ls-files --stage -- Frontend/webapp/src/
+> git show :Frontend/webapp/src/App.js
+> git ls-files --stage -- Frontend/webapp/src/
+> git show :Frontend/webapp/src/Components/Header.js
+> git ls-files --stage -- Frontend/webapp/src/Components/

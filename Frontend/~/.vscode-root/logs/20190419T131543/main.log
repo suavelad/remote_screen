@@ -1,0 +1,4 @@
+[2019-04-19 13:15:43.761] [main] [error] [uncaught exception in main]: Failed to watch /home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/User for changes (Error: ENOSPC: no space left on device, watch '/home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/User')
+[2019-04-19 13:15:43.927] [main] [info] update#setState idle
+[2019-04-19 13:15:44.553] [main] [info] [storage] migrating global storage from localStorage into SQLite
+[2019-04-19 13:15:44.555] [main] [info] [storage] migrated global storage

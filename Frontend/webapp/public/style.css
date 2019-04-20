@@ -1,0 +1,74 @@
+body{
+    background-color:lightcyan; 
+    background-image: url("https://wallpaperplay.com/walls/full/7/d/b/152583.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header {
+    background-color:rgb(251, 252, 253);
+    display: inline-block;
+    width: 100%;
+    height: 100px;
+}
+
+.logo {
+    margin-top:20px;
+    margin-left:20px; 
+    align-content: flex-start;
+}
+
+.nav {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.nav a {
+    margin: 15px;
+    text-decoration: none;
+    -webkit-text-fill-color: rgb(2, 2, 2);
+    font-weight: 910;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.nav a:hover {
+    -webkit-text-fill-color: rgb(0, 50, 107);
+}
+
+.content{    
+    display: flex;
+    width: 100%;
+    height: 900px;
+}
+
+
+
+.footer {
+    background-color: rgb(255, 214, 138);
+    display: inline-block;
+    text-align: center;
+    -webkit-text-size-adjust: inherit;
+    width: 100%;
+    height: 50px;
+}
+
+.footer h3 a {
+    -webkit-text-fill-color: rgb(0, 50, 107);
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.footer h3 a:hover {
+    -webkit-text-fill-color: rgb(0, 50, 107);
+    font-weight: 900;
+}
+
+.footer h3  {
+    font-size: 15px;
+}

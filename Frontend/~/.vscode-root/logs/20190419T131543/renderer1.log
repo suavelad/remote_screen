@@ -1,4 +1,0 @@
-[2019-04-19 13:15:47.867] [renderer1] [error] Failed to watch /home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/User for changes (Error: ENOSPC: no space left on device, watch '/home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/User')
-[2019-04-19 13:15:48.640] [renderer1] [error] Failed to watch /home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/logs/20190419T131543/output_1_20190419T131546 for changes (Error: ENOSPC: no space left on device, watch '/home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/logs/20190419T131543/output_1_20190419T131546')
-[2019-04-19 13:15:49.621] [renderer1] [error] Inotify limit reached (ENOSPC)
-[2019-04-19 13:15:55.687] [renderer1] [error] Failed to watch /home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/User/snippets for changes (Error: ENOSPC: no space left on device, watch '/home/s/Documents/Projects/Remote_Screen/Frontend/~/.vscode-root/User/snippets')

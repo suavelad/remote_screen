@@ -1,6 +1,0 @@
-[2019-04-19 14:33:24.215] [main] [info] update#setState idle
-[2019-04-19 14:33:54.221] [main] [info] update#setState checking for updates
-[2019-04-19 14:33:54.381] [main] [info] update#setState idle
-[2019-04-19 15:33:54.228] [main] [info] update#setState checking for updates
-[2019-04-19 15:33:54.273] [main] [error] Error: net::ERR_INTERNET_DISCONNECTED
-[2019-04-19 15:33:54.274] [main] [info] update#setState idle

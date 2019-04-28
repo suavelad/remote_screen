@@ -1,0 +1,40 @@
+[2019-04-26 10:52:33.638] [sharedprocess] [info] main {"machineId":"6003c51c53c7e12447dcf32045d2c04ecb57ea9f70846ed1f01804246df45550"}
+[2019-04-26 10:52:35.581] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 10:52:36.706] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-26 10:52:38.197] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 10:52:38.201] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 10:52:38.205] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 10:52:38.388] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-26 10:52:38.401] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-26 10:52:38.410] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-26 10:52:42.727] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 10:52:52.452] [sharedprocess] [info] Installing extension: esbenp.prettier-vscode
+[2019-04-26 10:52:52.511] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 10:53:13.651] [sharedprocess] [info] Starting to clean up unused language packs.
+[2019-04-26 10:53:33.298] [sharedprocess] [info] Downloaded extension: esbenp.prettier-vscode /tmp/e0340f6e-da60-48cb-9080-8cc78476fdec
+[2019-04-26 10:54:08.159] [sharedprocess] [info] Extracted extension to /home/s/.vscode/extensions/.esbenp.prettier-vscode-1.9.0: esbenp.prettier-vscode
+[2019-04-26 10:54:08.161] [sharedprocess] [info] Renamed to /home/s/.vscode/extensions/esbenp.prettier-vscode-1.9.0
+[2019-04-26 10:54:08.164] [sharedprocess] [info] Installation completed. esbenp.prettier-vscode
+[2019-04-26 10:54:09.688] [sharedprocess] [info] Extensions installed successfully: esbenp.prettier-vscode
+[2019-04-26 10:57:42.235] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:02:42.320] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:07:42.400] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:12:42.468] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:17:42.558] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:22:42.644] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:27:42.736] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:32:42.812] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:37:42.888] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:42:42.973] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:47:43.066] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:52:45.098] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 11:57:45.232] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:02:45.308] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:07:45.389] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:12:45.465] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:17:45.536] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:22:45.609] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:27:45.685] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:32:45.763] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:37:45.836] [sharedprocess] [info] Scanned user extensions: 11
+[2019-04-26 12:42:45.917] [sharedprocess] [info] Scanned user extensions: 11

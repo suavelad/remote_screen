@@ -8,14 +8,17 @@ body{
 }
 
 .header {
-  background-color:rgb(251, 252, 253);
+  background-color:rgb(81, 214, 255);
   display: inline-block;
   width: 100%;
   height: 100px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .logo {
   margin-top:20px;
+  float: left;
   margin-left:20px; 
   align-content: flex-start;
 }
@@ -37,33 +40,31 @@ body{
 }
 
 .nav a:hover {
-  -webkit-text-fill-color: rgb(0, 50, 107);
+  -webkit-text-fill-color: hsl(180, 81%, 90%);
 }
 
-
+/* CSS for Index.js */
 .home_content{    
   display: flex;
   width: 100%;
   height: 900px;
 }
 
+/* CSS for About.js */
 .about_content{    
   display: flex;
   width: 100%;
   height: 900px;
 }
 
+/* CSS for Contact.js */
 .contact_content{    
   display: flex;
   width: 100%;
   height: 900px;
 }
 
-.admin_content{    
-  display: flex;
-  width: 100%;
-  height: 900px;
-}
+/* CSS for the Error404.js */
 
 .error_content{    
   display: flex;
@@ -94,20 +95,156 @@ body{
 
 }
 
+/* CSS for Admin.js */
+
+.admin_content{    
+  width: 100%;
+  height: 800px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aliceblue;
+}
+
+.admin_content h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  margin-top: 15px;
+
+}
+
+.uploads {
+  position: relative;
+  text-align: center;
+  height:200px ;
+  width: 100%;
+}
+
+
+.admin_table{
+  position: relative;
+  width:100%;
+  float: left;
+  height:600px;
+  background-color: white;
+}
+
+
+.category{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color:  #666;
+     color: #666;
+     top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+
+.uploads h3{
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.file_upload{
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.file_upload::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.file_upload::before {
+  content: 'Select a file';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.file_upload:hover::before {
+  border-color: black;
+}
+.file_upload:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+.category:checked::before {
+  position: absolute;
+  font: 13px/1 'Open Sans', sans-serif;
+  left: 11px;
+  top: 7px;
+  content: '\02143';
+  transform: rotate(40deg);
+}
+
+.category:checked {
+  background-color: rgb(81, 214, 255);
+}
+
+.category:hover {
+  background-color: rgb(164, 166, 167);
+}
+
+label {
+  -webkit-text-fill-color: black;
+  font-size: 14px;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
+}
+
+.upload_button{
+  -webkit-text-fill-color: black;
+  border-color: black;
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.upload_button:hover {
+  border-color: black;
+}
+
+
+/* CSS for Footer.js */
 
 .footer {
-  background-color: rgb(255, 214, 138);
-  display: inline-block;
+  background-color: rgb(143, 229, 255);
   text-align: center;
   -webkit-text-size-adjust: inherit;
   width: 100%;
   height: 50px;
 }
 
-.footer h3 a {
-  -webkit-text-fill-color: rgb(0, 50, 107);
 
+/* Styling the link class: It sees the link class as 'a' */
+.footer h3 a {
+  -webkit-text-fill-color: rgb(0, 13, 27);
   font-weight: 500;
+  margin-top: 17px;
   text-decoration: none;
   display: inline-block;
 }
@@ -117,7 +254,7 @@ body{
   font-weight: 900;
 }
 
+
 .footer h3  {
   font-size: 15px;
-
 }

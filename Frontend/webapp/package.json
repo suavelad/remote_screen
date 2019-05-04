@@ -5,11 +5,13 @@
   "dependencies": {
     "@google-cloud/storage": "^2.5.0",
     "axios": "^0.18.0",
+    "fast-crc32c": "^1.0.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^3.0.0",
-    "react-table": "^6.9.2"
+    "react-table": "^6.9.2",
+    "write-file-atomic": "^2.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

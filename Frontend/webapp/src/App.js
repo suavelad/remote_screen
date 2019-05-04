@@ -9,6 +9,7 @@ function App(){
 
       <Header />
       <div className="home_content"> 
+        <h2>The Smart Solution for Digital Marketing</h2>
       
       </div>
       <Footer />

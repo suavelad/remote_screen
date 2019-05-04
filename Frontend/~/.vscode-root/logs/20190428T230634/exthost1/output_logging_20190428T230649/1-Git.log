@@ -11,3 +11,5 @@ Open repository: /home/s/Documents/Projects/Remote_Screen
 > git rev-list --left-right dev...refs/remotes/origin/dev
 > git for-each-ref --format %(refname) %(objectname) --sort -committerdate
 > git remote --verbose
+> git check-ignore -z --stdin
+> git show :Frontend/webapp/src/Components/Admin.js

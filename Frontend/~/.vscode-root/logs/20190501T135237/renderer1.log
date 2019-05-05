@@ -1,0 +1,16 @@
+[2019-05-01 13:53:08.201] [renderer1] [warning] UNRESPONSIVE extension host, 'ms-vscode.cpptools' took 47% of 5240.963ms, saved PROFILE here: '/tmp/exthost-be6664.cpuprofile' [{"id":"bysabi.prettier-vscode-semistandard","total":57,"percentage":0},{"id":"esbenp.prettier-vscode","total":799008,"percentage":15},{"id":"etmoffat.pip-packages","total":74535,"percentage":1},{"id":"gc","total":114516,"percentage":2},{"id":"HookyQR.beautify","total":1545625,"percentage":29},{"id":"ms-vscode.cpptools","total":2473310,"percentage":47},{"id":"program","total":255,"percentage":0},{"id":"self","total":230152,"percentage":4}]
+[2019-05-01 13:53:16.247] [renderer1] [warning] UNRESPONSIVE extension host, 'vsciot-vscode.vscode-arduino' took 98% of 2079.549ms, saved PROFILE here: '/tmp/exthost-796895.cpuprofile' [{"id":"dbaeumer.vscode-eslint","total":817,"percentage":0},{"id":"HookyQR.beautify","total":163,"percentage":0},{"id":"program","total":11542,"percentage":1},{"id":"self","total":7453,"percentage":0},{"id":"vsciot-vscode.vscode-arduino","total":2032181,"percentage":98},{"id":"vscode.git","total":15525,"percentage":1},{"id":"vscode.merge-conflict","total":644,"percentage":0}]
+[2019-05-01 16:56:20.795] [renderer1] [error] Data tree node not found: [object Object]: Error: Data tree node not found: [object Object]
+    at Y.getDataNode (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:955:302)
+    at Y.updateWidth (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:953:126)
+    at e.s.instantiationService.createInstance.e [as updateWidth] (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:5243:730)
+    at i.elementDisposable.i.label.onDidRender (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:5228:51)
+    at d.fire (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:75:416)
+    at D.render (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:4408:576)
+    at D.notifyFileDecorationsChanges (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:4405:487)
+    at _widgets.forEach.t (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:4403:93)
+    at Array.forEach (<anonymous>)
+    at _register.decorationsService.onDidChangeDecorations.e (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:4403:80)
+    at e (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:71:690)
+    at d.fire (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:75:416)
+    at setTimeout (file:///usr/share/code/resources/app/out/vs/workbench/workbench.main.js:71:973)

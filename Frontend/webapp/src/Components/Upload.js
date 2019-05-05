@@ -1,17 +1,18 @@
-import { bigIntLiteral } from '@babel/types';
 
 // Imports the Google Cloud client library
 const {Storage} = require('@google-cloud/storage');
 
 // Creates a client
-const storage = new Storage();
-
+const storage= new Storage({
+  projectId: 'media_2019/images',
+  keyFilename: '/home/s/Documents/Projects/Remote_Screen/Media-606208d3d348.json'
+})
 
 const bucketName = 'media_2019';
-const filename = '../images/bg.jpg'
+// const filename = '../images/bg.jpg'
 
 // Uploads a local file to the bucket
-async function Upload(){
+async function Upload(filename){
     await storage.bucket(bucketName).upload(filename, {
         // Support for HTTP requests made with `Accept-Encoding: gzip`
         gzip: true,
@@ -27,5 +28,5 @@ async function Upload(){
       
       console.log(`${filename} uploaded to ${bucketName}.`);
 }
-
+// Upload()
 export default Upload

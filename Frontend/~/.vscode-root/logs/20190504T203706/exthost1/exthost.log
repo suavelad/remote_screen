@@ -1,0 +1,28 @@
+[2019-05-04 20:37:18.261] [exthost] [info] extension host started
+[2019-05-04 20:37:18.566] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:18.566] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-05-04 20:37:18.768] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:18.768] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-05-04 20:37:18.925] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:18.925] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/git/dist/main
+[2019-05-04 20:37:19.243] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:19.243] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-05-04 20:37:19.380] [exthost] [info] ExtensionService#_doActivateExtension bysabi.prettier-vscode-semistandard {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:19.380] [exthost] [info] ExtensionService#loadCommonJSModule /home/s/.vscode/extensions/bysabi.prettier-vscode-semistandard-0.22.1/out/src/extension
+[2019-05-04 20:37:19.851] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:19.851] [exthost] [info] ExtensionService#loadCommonJSModule /home/s/.vscode/extensions/dbaeumer.vscode-eslint-1.8.2/client/out/extension
+[2019-05-04 20:37:19.946] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:19.946] [exthost] [info] ExtensionService#loadCommonJSModule /home/s/.vscode/extensions/esbenp.prettier-vscode-1.9.0/out/src/extension
+[2019-05-04 20:37:20.838] [exthost] [info] ExtensionService#_doActivateExtension etmoffat.pip-packages {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:20.838] [exthost] [info] ExtensionService#loadCommonJSModule /home/s/.vscode/extensions/etmoffat.pip-packages-0.4.3/out/pip-updater
+[2019-05-04 20:37:20.876] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:20.876] [exthost] [info] ExtensionService#loadCommonJSModule /home/s/.vscode/extensions/hookyqr.beautify-1.5.0/extension
+[2019-05-04 20:37:21.261] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cpptools {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:21.261] [exthost] [info] ExtensionService#loadCommonJSModule /home/s/.vscode/extensions/ms-vscode.cpptools-0.22.1/out/src/main
+[2019-05-04 20:37:22.867] [exthost] [info] eager extensions activated
+[2019-05-04 20:37:23.229] [exthost] [info] ExtensionService#_doActivateExtension vsciot-vscode.vscode-arduino {"startup":true,"activationEvent":"*"}
+[2019-05-04 20:37:23.229] [exthost] [info] ExtensionService#loadCommonJSModule /home/s/.vscode/extensions/vsciot-vscode.vscode-arduino-0.2.25/out/src/extension
+[2019-05-04 22:46:09.827] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features {"startup":false,"activationEvent":"onLanguage:css"}
+[2019-05-04 22:46:09.828] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/css-language-features/client/dist/cssMain
+[2019-05-04 22:46:30.557] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:javascript"}
+[2019-05-04 22:46:30.557] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/code/resources/app/extensions/typescript-language-features/dist/extension

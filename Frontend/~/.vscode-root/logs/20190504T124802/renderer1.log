@@ -1,0 +1,4 @@
+[2019-05-04 12:48:19.873] [renderer1] [warning] UNRESPONSIVE extension host, 'ms-vscode.cpptools' took 96% of 1053.946ms, saved PROFILE here: '/tmp/exthost-2d20ff.cpuprofile' [{"id":"gc","total":23127,"percentage":2},{"id":"ms-vscode.cpptools","total":1006761,"percentage":96},{"id":"program","total":12357,"percentage":1},{"id":"self","total":2911,"percentage":0}]
+[2019-05-04 12:48:25.173] [renderer1] [error] net::ERR_NAME_NOT_RESOLVED: {1}
+[2019-05-04 12:49:32.425] [renderer1] [warning] {}
+[2019-05-04 14:57:37.488] [renderer1] [warning] UNRESPONSIVE extension host, 'vscode.typescript-language-features' took 94% of 506.413ms, saved PROFILE here: '/tmp/exthost-b5e19c.cpuprofile' [{"id":"program","total":9930,"percentage":2},{"id":"vscode.typescript-language-features","total":473856,"percentage":94}]

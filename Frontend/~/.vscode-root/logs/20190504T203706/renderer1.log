@@ -1,2 +1,0 @@
-[2019-05-04 20:37:23.014] [renderer1] [warning] UNRESPONSIVE extension host, 'ms-vscode.cpptools' took 96% of 713.48ms, saved PROFILE here: '/tmp/exthost-56307e.cpuprofile' [{"id":"gc","total":8160,"percentage":1},{"id":"ms-vscode.cpptools","total":681525,"percentage":96},{"id":"program","total":4909,"percentage":1},{"id":"self","total":15535,"percentage":2}]
-[2019-05-04 20:37:29.219] [renderer1] [error] net::ERR_NAME_NOT_RESOLVED: {1}

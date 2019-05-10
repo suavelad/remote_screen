@@ -4,16 +4,16 @@ const {Storage} = require('@google-cloud/storage');
 
 // Creates a client
 const storage= new Storage({
-  projectId: 'media_2019/images',
+  projectId: 'media_2019',
   keyFilename: '/home/s/Documents/Projects/Remote_Screen/Media-606208d3d348.json'
 })
 
-const bucketName = 'media_2019';
-// const filename = '../images/bg.jpg'
+const bucketName = 'media_2019'
+const fileName = '../images/logo.png'
 
 // Uploads a local file to the bucket
-async function Upload(filename){
-    await storage.bucket(bucketName).upload(filename, {
+async function Upload(fileName){
+    await storage.bucket(bucketName).upload(fileName, {
         // Support for HTTP requests made with `Accept-Encoding: gzip`
         gzip: true,
         // By setting the option `destination`, you can change the name of the
@@ -26,7 +26,7 @@ async function Upload(filename){
         },
       });
       
-      console.log(`${filename} uploaded to ${bucketName}.`);
+      console.log(`${fileName} uploaded to ${bucketName}.`);
 }
-// Upload()
-export default Upload
+Upload(fileName)
+// export default Upload

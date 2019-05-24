@@ -2,6 +2,12 @@ import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 import Table from "./Table"
+
+import axios from 'axios'
+
+// const axios = require("axios")
+
+
 // import Upload from "./Upload"
 // import axios from 'axios'
 
@@ -18,46 +24,25 @@ import Table from "./Table"
 
 
 class Admin extends React.Component{
-  
-  state = {
-    selectedFile: null
+
+  onChangeHandler=event=>{
+    this.setState({
+      selectedFile:event.target.files[0],
+      loaded:0,
+    })
+    // console.log(event.target.files[0])
   }
-  
-    fileSelectedHandler = event => {
-      this.setState({
-            selectedFile:event.target.files[0]
-      })
 
+  onClickHandler=()=> {
+    const data = new FormData()
+    data.append('file',this.state.selectedFile)
+    axios.post("http://localhost:8007/upload",data, {
 
-}
-
-    fileUploadHandler= ()=> {
-      const fd = new FormData();
-      try {
-        if (this.state.selectedFile.__dirname ==="null"){
-          alert('No file inserted')
-        }
-        else{
-          
-          fd.append('image',this.state.selectedFile,this.state.selectedFile.__dirname)
-          console.log("the selected file is : ",this.state.selectedFile.__dirname)
-          // Upload(this.state.selectedFile.name)
-        // axios.post("https://www.googleapis.com/upload/storage/v1/b/media_2019/o?uploadType=media&name="+ this.state.selectedFile.name)
-        // .then ( res=> {
-        //   console.log(res)
-        // });
-      }
-      }
-      catch(e){
-        console.log('error', e)
-      }
- 
-
-    }
-
-
-
-    
+    })
+    .then(res=>{
+      console.log(res.statusText)
+    })
+  }
     render(){
       
       
@@ -66,34 +51,36 @@ class Admin extends React.Component{
           <Header />
           <div className="admin_content"> 
               <div className="uploads">
-                    <h2>Upload Media File</h2>
+                    <h1>Upload Media File</h1>
+                    {/* <form action= "/admin" method="POST" enctype="multipart/form-data"> */}
+                      <h3> Category:    
+                      <label>
+                        <input 
+                          type="radio" 
+                          name="category" 
+                          value="video" 
+                          className="category"
+                          />
+                          Video
+                      
+                      </label>
 
-                    <h3> Category:    
-                    <label>
-                      <input 
-                        type="radio" 
-                        name="category" 
-                        value="video" 
-                        className="category"
-                        />
-                        Video
-                    
-                    </label>
-
-                    <label>
-                      <input 
-                        type="radio" 
-                        name="category" 
-                        value= "image"  
-                        className="category"
-                        />
-                        Image
-                    </label>
-                    </h3>
-                    <input type= "file" name="file" className="file_upload" onChange={this.fileSelectedHandler} />
-                    <div className="uploadButton">
-                      <button className="upload_button" onClick={this.fileUploadHandler}>Upload</button>
-                    </div>
+                      <label>
+                        <input 
+                          type="radio" 
+                          name="category" 
+                          value= "image"  
+                          className="category"
+                          />
+                          Image
+                      </label>
+                      </h3>
+                      {/* <input type= "file" name="uploadFile" className="file_upload" onChange={this.onChange} /> */}
+                      <input type= "file" name="uploadFile" onChange={this.onChangeHandler} className="file_upload"  />
+                      <div className="uploadButton">
+                      <button type = "submit" className="upload_button" onClick={this.onClickHandler}>Upload </button>
+                      </div>
+                  {/* </form> */}
               </div>
             <hr />
             <Table />

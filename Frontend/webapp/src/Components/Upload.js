@@ -9,24 +9,31 @@ const storage= new Storage({
 })
 
 const bucketName = 'media_2019'
-const fileName = '../images/logo.png'
+// const fileName = '../images/logo.png'
 
-// Uploads a local file to the bucket
-async function Upload(fileName){
-    await storage.bucket(bucketName).upload(fileName, {
-        // Support for HTTP requests made with `Accept-Encoding: gzip`
-        gzip: true,
-        // By setting the option `destination`, you can change the name of the
-        // object you are uploading to a bucket.
-        metadata: {
-          // Enable long-lived HTTP caching headers
-          // Use only if the contents of the file will never change
-          // (If the contents will change, use cacheControl: 'no-cache')
-          cacheControl: 'public, max-age=31536000',
-        },
-      });
+// // Uploads a local file to the bucket
+async function Upload(){
+//     await storage.bucket(bucketName).upload(fileName, {
+//         // Support for HTTP requests made with `Accept-Encoding: gzip`
+//         gzip: true,
+//         // By setting the option `destination`, you can change the name of the
+//         // object you are uploading to a bucket.
+//         metadata: {
+//           // Enable long-lived HTTP caching headers
+//           // Use only if the contents of the file will never change
+//           // (If the contents will change, use cacheControl: 'no-cache')
+//           cacheControl: 'public, max-age=31536000',
+//         },
+//       });
       
-      console.log(`${fileName} uploaded to ${bucketName}.`);
+//       console.log(`${fileName} uploaded to ${bucketName}.`);
+const [files] = await storage.bucket(bucketName).getFiles();
+console.log('Files:');
+files.forEach(file => {
+  console.log(file.name + ":" + (file.metadata.size/1024).toFixed(2) + "MB  :  " + (file.metadata.updated).toString().replace(/T/, ' :').replace(/\.\w*/, '')
+  + ": " + file.metadata.contentType);
+});
 }
-Upload(fileName)
+
+Upload()
 // export default Upload

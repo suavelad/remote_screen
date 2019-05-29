@@ -17,73 +17,73 @@ MQTT_TOPIC = "Media"
 
 LatestImage = ''
 LatestVideo = ''
+LatestFile = ''
 VError = ''
 IError = ''
+Error = ''
 imageNames = []
+fileNames = []
 videoNames = []
 
+print("Latest File Uploaded: ")
 while True :
     # Write a shell command and saves it in the output variable
 
-    fileImages = os.popen("gsutil ls -lh gs://media_2019/images | sort -k 2")
-    fileVideos = os.popen("gsutil ls -lh  gs://media_2019/videos | sort -k 2")
+    # fileImages = os.popen("gsutil ls -lh gs://media_2019/images | sort -k 2")
+    # fileVideos = os.popen("gsutil ls -lh  gs://media_2019/videos | sort -k 2")
+    files = os.popen("gsutil ls -lh  gs://media_2019 | sort -k 2")
 
-    # print("Image Names: ")
-    for imageName in fileImages.readlines():
-        imageNames.append(imageName[23:len(imageName)-1])
-        # print((imageName[23:len(imageName)-1]))
+    for fileName in files.readlines():
+        fileNames.append(fileName[50:-1])
+        # print((fileName[50:-1]))
 
-    # print("****************")
-
-    # print("Video Names: ")
-    for videoName in fileVideos.readlines():
-        videoNames.append(videoName[23:len(videoName)-1])
-        # print(videoName[23:len(videoName)-1])
-
-    print("Latest Upload: ")
-
-    # LatestImage = imageNames[-1][34:]
-    # LatestVideo = videoNames[-1][34:]
-    # LatestImage = ''
-    # LatestVideo = ''
-    # print(LatestImage)
-    # print(LatestVideo)
-
-    if LatestImage == imageNames[-1][34:]:
-        IError = 'True'
+    if LatestFile == fileNames[-1]:
+        # Error = 'True'
         # print("Pass")
         pass
+
     else: 
-        print("Image Publishing...")
-        LatestImage = imageNames[-1][34:]
-        IError = 'False'
-        print(LatestImage)
+        print(" Publishing Media Content...")
+        LatestFile = fileNames[-1]
+        # Error = 'False'
+        MQTT_MSG = LatestFile
+        print(LatestFile)
+    # if LatestImage == imageNames[-1][34:]:
+    #     IError = 'True'
+    #     # print("Pass")
+    #     pass
 
-    if LatestVideo == videoNames[-1][34:]:
-        VError = 'True'
-        # print("Pass")
-        pass
+    # else: 
+    #     print("Image Publishing...")
+    #     LatestImage = imageNames[-1][34:]
+    #     IError = 'False'
+    #     print(LatestImage)
 
-    else:
-        print("Video Publishing...")
-        LatestVideo = videoNames[-1][34:]
-        VError = 'False'
-        print(LatestVideo)
+    # if LatestVideo == videoNames[-1][34:]:
+    #     VError = 'True'
+    #     # print("Pass")
+    #     pass
 
-    if VError == 'True' and IError == 'False':
-        MQTT_MSG = LatestImage
+    # else:
+    #     print("Video Publishing...")
+    #     LatestVideo = videoNames[-1][34:]
+    #     VError = 'False'
+    #     print(LatestVideo)
+
+   
+    # if VError == 'True' and IError == 'False':
+    #     MQTT_MSG = LatestImage
     
-    elif IError == 'True' and VError == 'False':
-        MQTT_MSG = LatestVideo
+    # elif IError == 'True' and VError == 'False':
+    #     MQTT_MSG = LatestVideo
     
-    elif (IError == 'True') and (IError == 'True'):
-        MQTT_MSG = 'NaN'
+    # elif (IError == 'True') and (IError == 'True'):
+    #     MQTT_MSG = 'NaN'
     
-    else:
-        MQTT_MSG = LatestImage + "," + LatestVideo
-    print("*****************")
-    print("Files for publishing:  ")
-    print(MQTT_MSG)
+    # else:
+    #     MQTT_MSG = LatestImage + "," + LatestVideo
+    # print("*****************")
+    # print("Files for publishing:  ")
 
 
     # This is the Publisher

@@ -2,26 +2,14 @@ import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 import Table from "./Table"
-
 import axios from 'axios'
 
-// const axios = require("axios")
-
-
-// import Upload from "./Upload"
-// import axios from 'axios'
-
 // const {Storage}= require('@google-cloud/storage')
-// const fs= require('fs')
 // const storage= new Storage({
 //   projectId: 'media_2019',
 //   keyFilename: '/home/s/Documents/Projects/Remote_Screen/Media-606208d3d348.json'
 // })
 // const bucketName= 'media_2019'
-
-// const storage = new Storage()
-
-
 
 class Admin extends React.Component{
 
@@ -36,7 +24,7 @@ class Admin extends React.Component{
   onClickHandler=()=> {
     const data = new FormData()
     data.append('file',this.state.selectedFile)
-    axios.post("http://localhost:8007/upload",data, {
+    axios.post("http://localhost:8000/upload",data, {
 
     })
     .then(res=>{
@@ -51,31 +39,9 @@ class Admin extends React.Component{
           <Header />
           <div className="admin_content"> 
               <div className="uploads">
-                    <h1>Upload Media File</h1>
-                    {/* <form action= "/admin" method="POST" enctype="multipart/form-data"> */}
-                      <h3> Category:    
-                      <label>
-                        <input 
-                          type="radio" 
-                          name="category" 
-                          value="video" 
-                          className="category"
-                          />
-                          Video
-                      
-                      </label>
-
-                      <label>
-                        <input 
-                          type="radio" 
-                          name="category" 
-                          value= "image"  
-                          className="category"
-                          />
-                          Image
-                      </label>
-                      </h3>
-                      {/* <input type= "file" name="uploadFile" className="file_upload" onChange={this.onChange} /> */}
+                    <h2>Upload Media File</h2>
+                    {/* <form action= "http://localhost:8000/upload" method="POST" enctype="multipart/form-data"> */}
+                  
                       <input type= "file" name="uploadFile" onChange={this.onChangeHandler} className="file_upload"  />
                       <div className="uploadButton">
                       <button type = "submit" className="upload_button" onClick={this.onClickHandler}>Upload </button>

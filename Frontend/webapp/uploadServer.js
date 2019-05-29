@@ -3,7 +3,8 @@ var app = express()
 var multer =require('multer')
 var cors = require('cors')
 app.use(cors())
-var port=8007
+var port=8000
+
 
 // Google Cloud Platform
 // Imports the Google Cloud client library
@@ -41,7 +42,7 @@ app.post('/upload',function(req,res){
             return res.status(500).json(err)
         }
         var fileName = req.file.path
-        // console.log(fileName)
+        console.log(req.file.mimetype)
         // async function Upload(fileName){
             storages.bucket(bucketName).upload(fileName, {
                 // Support for HTTP requests made with `Accept-Encoding: gzip`
@@ -57,9 +58,12 @@ app.post('/upload',function(req,res){
               });
               
               console.log(`${fileName} uploaded to ${bucketName}.`);
+
+
         // }
 
     return res.status(200).send(req.file)
+          
 
 
 

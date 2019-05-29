@@ -35,19 +35,38 @@ def on_connect(client, userdata, flags, rc):
 
 
 def on_message(client, userdata, msg):
-    MediaFile = msg.payload.decode()
-    if MediaFile in MediaFiles:
-        print("Already exist")
-        pass
-    else: 
-        MediaFiles.append(MediaFile)
-        print("Media File Download in progress")
-        print("File to download: " + MediaFile)
-        blob = bucket.blob(MediaFile)
-        blob.download_to_filename(MediaFile)
-        blob.download_to_filename("Content/"+MediaFile)
-        print("Media File Download Sucessful")
-        print(" ")
+    mediaFile = msg.payload.decode()
+    # print(mediaFile)
+    # print(len(mediaFile))
+    # blob = bucket.blob(mediaFile)
+    # blob.download_to_filename("Content/"+mediaFile)
+
+    if ',' in mediaFile:
+        imageFile, videoFile = mediaFile.split(",")
+        print(imageFile)
+        print(len(imageFile))
+        print(videoFile)
+        print(len(videoFile))
+
+        print("Media file download in progress")
+        MediaFiles.append(imageFile)
+        MediaFiles.append(videoFile)
+        print("Image file to download: " + imageFile)
+        ImageBlob = bucket.blob(imageFile)
+        print(ImageBlob)
+        ImageBlob.download_to_filename("Content/"+imageFile)
+        print("Video file to download: " + videoFile)
+        VideoBlob = bucket.blob(videoFile)
+        VideoBlob.download_to_filename("Content/"+videoFile)
+
+    else:
+        MediaFiles.append(mediaFile)
+        print("Media file to download: " + mediaFile)
+        MediaBlob = bucket.blob(mediaFile)
+        MediaBlob.download_to_filename("Content/"+mediaFile)
+
+    print("Media file download sucessful")
+    print(" ")
 
 # Initiate MQTT Client
 mqttc = mqtt.Client()

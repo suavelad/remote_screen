@@ -21,9 +21,9 @@ LatestFile = ''
 VError = ''
 IError = ''
 Error = ''
-imageNames = []
-fileNames = []
-videoNames = []
+imageFiles = []
+MediaFiles = []
+videoFiles = []
 
 print("Latest File Uploaded: ")
 while True :
@@ -33,57 +33,66 @@ while True :
     # fileVideos = os.popen("gsutil ls -lh  gs://media_2019/videos | sort -k 2")
     files = os.popen("gsutil ls -lh  gs://media_2019 | sort -k 2")
 
-    for fileName in files.readlines():
-        fileNames.append(fileName[50:-1])
+    for Mediafile in files.readlines():
+        if '.mp4' in Mediafile:
+            videoFiles.append(Mediafile[50:-1])
+        elif ('.jpeg') or ('.jpg') in fileName:
+            imageFiles.append(Mediafile[50:-1])
+        # MediaFiles.append(Mediafile[50:-1])
+        
         # print((fileName[50:-1]))
 
-    if LatestFile == fileNames[-1]:
-        # Error = 'True'
+    # if LatestFile == imageFiles[-1] or videoFiles[-1]:
+    #     # Error = 'True'
+    #     # print("Pass")
+    #     pass
+    # elif LatestFile == imageFiles[-1] and videoFiles[-1]:
+    #     pass
+
+    # else: 
+    #     print(" Publishing Media Content...")
+    #     LatestFile = imageFiles[-1] + "," + videoFiles[-1]
+    #     # Error = 'False'
+    #     MQTT_MSG = LatestFile
+    #     print(LatestFile)
+   
+    # print(MediaFiles)
+    if imageFiles == [] or LatestImage == imageFiles[-1]:
+        IError = 'True'
         # print("Pass")
         pass
 
     else: 
-        print(" Publishing Media Content...")
-        LatestFile = fileNames[-1]
-        # Error = 'False'
-        MQTT_MSG = LatestFile
-        print(LatestFile)
-    # if LatestImage == imageNames[-1][34:]:
-    #     IError = 'True'
-    #     # print("Pass")
-    #     pass
+        print("Image Publishing...")
+        LatestImage = imageFiles[-1]
+        IError = 'False'
+        print(LatestImage)
 
-    # else: 
-    #     print("Image Publishing...")
-    #     LatestImage = imageNames[-1][34:]
-    #     IError = 'False'
-    #     print(LatestImage)
+    if  videoFiles == [] or LatestVideo == videoFiles[-1]:
+        VError = 'True'
+        # print("Pass")
+        pass
 
-    # if LatestVideo == videoNames[-1][34:]:
-    #     VError = 'True'
-    #     # print("Pass")
-    #     pass
+    else:
+        print("Video Publishing...")
+        LatestVideo = videoFiles[-1]
+        VError = 'False'
+        print(LatestVideo)
 
-    # else:
-    #     print("Video Publishing...")
-    #     LatestVideo = videoNames[-1][34:]
-    #     VError = 'False'
-    #     print(LatestVideo)
-
-   
-    # if VError == 'True' and IError == 'False':
-    #     MQTT_MSG = LatestImage
+    if VError == 'True' and IError == 'False':
+        MQTT_MSG = LatestImage
     
-    # elif IError == 'True' and VError == 'False':
-    #     MQTT_MSG = LatestVideo
+    elif IError == 'True' and VError == 'False':
+        MQTT_MSG = LatestVideo
     
-    # elif (IError == 'True') and (IError == 'True'):
-    #     MQTT_MSG = 'NaN'
+    elif (IError == 'True') and (IError == 'True'):
+        MQTT_MSG = 'NaN'
     
-    # else:
-    #     MQTT_MSG = LatestImage + "," + LatestVideo
-    # print("*****************")
-    # print("Files for publishing:  ")
+    else:
+        MQTT_MSG = LatestImage + "," + LatestVideo
+    print("*****************")
+    print("Files for publishing:  ")
+    print(MQTT_MSG)
 
 
     # This is the Publisher
@@ -91,19 +100,23 @@ while True :
     # Define on_publish event function
     def on_publish(client, userdata, mid):
         print("Message Published...")
-        print (" ")
+        print(" ")
 
-    # Initiate MQTT Client
-    client = mqtt.Client()
+    if MQTT_MSG == 'NaN':
+        print("Non Content to Publish")
+    
+    else:
+        # Initiate MQTT Client
+        client = mqtt.Client()
 
-    # Register publish callback function
-    client.on_publish = on_publish
+        # Register publish callback function
+        client.on_publish = on_publish
 
-    # Connect with MQTT Broker
-    client.connect(MQTT_HOST, MQTT_PORT, MQTT_KEEPALIVE_INTERVAL) 
+        # Connect with MQTT Broker
+        client.connect(MQTT_HOST, MQTT_PORT, MQTT_KEEPALIVE_INTERVAL) 
 
-    # Publish message to MQTT Broker 
-    client.publish(MQTT_TOPIC, MQTT_MSG)
+        # Publish message to MQTT Broker 
+        client.publish(MQTT_TOPIC, MQTT_MSG)
 
-    # Disconnect from MQTT_Broker
-    client.disconnect()
+        # Disconnect from MQTT_Broker
+        client.disconnect()

@@ -96,6 +96,8 @@ body{
   margin-left: 35%;
   text-align: center;
   left: 50%;
+  border-radius: 25px;
+
 
 }
 
@@ -107,6 +109,10 @@ body{
   text-align: center;
   left: 50%;
 
+}
+
+.errorImg{
+  padding-top: 100px;
 }
 
 /* CSS for my Admin Table */
@@ -287,4 +293,34 @@ label {
 
 .footer h3  {
   font-size: 15px;
+}
+
+
+/* Contact Page */
+
+.main_contact {
+  display: inline-block;
+  background-color: #f9f9f9;
+  width: 370px;
+  height:230px;
+  padding-left: 70px;
+  text-align: left;
+  margin-left: 30%;
+  margin-top: 20%;
+  opacity: 0.6;
+  border-radius: 25px;
+
+  
+}
+
+.contact_addr {
+  padding-right: 10px;
+}
+
+.contact_phone {
+  padding-right: 20px;
+}
+
+.contact_email {
+  padding-right: 15px;
 }

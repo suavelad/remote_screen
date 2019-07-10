@@ -43,6 +43,7 @@ def on_message(client, userdata, msg):
         MediaFiles.append(imageFile)
         MediaFiles.append(videoFile)
         print("Image file to download: " + imageFile)
+        print(type(imageFile))
         ImageBlob = bucket.blob(imageFile)
         ImageBlob.download_to_filename("Content/"+imageFile)
         print("Video file to download: " + videoFile)
@@ -52,6 +53,7 @@ def on_message(client, userdata, msg):
     else:
         MediaFiles.append(mediaFile)
         print("Media file to download: " + mediaFile)
+        print(type(mediaFile))
         MediaBlob = bucket.blob(mediaFile)
         MediaBlob.download_to_filename("Content/"+mediaFile)
 

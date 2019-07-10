@@ -26,7 +26,7 @@ MediaFiles = []
 videoFiles = []
 
 print("Latest File Uploaded: ")
-while True :
+while True:
     # Write a shell command and saves it in the output variable
 
     # fileImages = os.popen("gsutil ls -lh gs://media_2019/images | sort -k 2")
@@ -38,23 +38,6 @@ while True :
             videoFiles.append(Mediafile[50:-1])
         elif ('.jpeg') or ('.jpg') in fileName:
             imageFiles.append(Mediafile[50:-1])
-        # MediaFiles.append(Mediafile[50:-1])
-        
-        # print((fileName[50:-1]))
-
-    # if LatestFile == imageFiles[-1] or videoFiles[-1]:
-    #     # Error = 'True'
-    #     # print("Pass")
-    #     pass
-    # elif LatestFile == imageFiles[-1] and videoFiles[-1]:
-    #     pass
-
-    # else: 
-    #     print(" Publishing Media Content...")
-    #     LatestFile = imageFiles[-1] + "," + videoFiles[-1]
-    #     # Error = 'False'
-    #     MQTT_MSG = LatestFile
-    #     print(LatestFile)
    
     # print(MediaFiles)
     if imageFiles == [] or LatestImage == imageFiles[-1]:

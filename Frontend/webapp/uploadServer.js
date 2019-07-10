@@ -5,7 +5,6 @@ var cors = require('cors')
 app.use(cors())
 var port=8000
 
-
 // Google Cloud Platform
 // Imports the Google Cloud client library
 const {Storage} = require('@google-cloud/storage');
@@ -18,8 +17,6 @@ const storages= new Storage({
 
 const bucketName = 'media_2019'
 
-
-
 var storage = multer.diskStorage({
     destination:function(req,file,cb){
         cb(null,'public/uploads')
@@ -31,6 +28,10 @@ var storage = multer.diskStorage({
 })
 
 var upload = multer({storage: storage}).single('file')
+
+// app.get('/', function (req, res) {
+//     res.send('Goal')
+//   })
 
 app.post('/upload',function(req,res){
 
@@ -55,20 +56,24 @@ app.post('/upload',function(req,res){
                   // (If the contents will change, use cacheControl: 'no-cache')
                   cacheControl: 'public, max-age=31536000',
                 },
+
               });
-              
+            //   if (response.status === 200) {
+
+            //   }
               console.log(`${fileName} uploaded to ${bucketName}.`);
+              console.log(`${req.file.originalname} : ${req.file.originalname.length} uploadeed to ${bucketName}.`);
 
 
+              
         // }
 
     return res.status(200).send(req.file)
-          
-
-
+    // return res.redirect('http://localhost:3000/')
 
     })
-})
+}
+)
 
 
 app.listen(port, function(){

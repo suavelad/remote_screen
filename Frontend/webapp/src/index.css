@@ -310,9 +310,10 @@ label {
   opacity: 0.6;
   border-radius: 25px;
 
-  
 }
-
+.main_contact h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .contact_addr {
   padding-right: 10px;
 }
